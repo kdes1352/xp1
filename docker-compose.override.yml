@@ -8,10 +8,10 @@ services:
   mssql:
     volumes:
       - type: bind
-        source: .\docker\data
+        source: .\docker\data\mssql
         target: c:\data
   solr:
     volumes:
       - type: bind
-        source: .\data\solr
+        source: .\docker\data\solr
         target: c:\data
