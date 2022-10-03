@@ -1,0 +1,17 @@
+services:
+  traefik:
+    volumes:
+      - source: \\.\pipe\docker_engine
+        target: \\.\pipe\docker_engine
+        type: npipe
+      - ./docker/traefik:C:/etc/traefik
+  mssql:
+    volumes:
+      - type: bind
+        source: .\docker\data
+        target: c:\data
+  solr:
+    volumes:
+      - type: bind
+        source: .\data\solr
+        target: c:\data
